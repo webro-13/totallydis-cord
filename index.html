@@ -7,14 +7,30 @@
 </head>
 <body>
     <h1>Hello World!</h1>
-    <input id="nameInput" title="type your name" placeholder="what's your name?" />
-    <button onclick="hello()">click me!</button>
+    <input id="nameInput" title="type your name" placeholder="Send a message to discord" />
+    <button onclick="hello()">Send</button>
     <script>
         function hello() {
     var inputName = document.getElementById('nameInput').value;
-    var intup = inputName.slice(0, 1).toUpperCase()
-    var itup = inputName.slice(1).toLowerCase()
-    alert("hello " + intup +  itup );
+        const webhookURL = "https://discord.com/api/webhooks/1353751263392563310/e0qskLQXNXlz6eWrP6cXiDwWrvttzw5OtsZEcBmno16R5hMJNTtT6pdY_6J0SwChZAEg"; // Replace with your webhook URL
+        const message = inputName; // The message to send
+        const data = {
+          content: message
+        };
+
+        fetch(webhookURL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => {
+          console.log("Message sent to Discord!", response);
+        })
+        .catch(error => {
+          console.error("Error sending message:", error);
+        });
 }
     </script>
 </body>
