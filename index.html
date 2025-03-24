@@ -7,12 +7,16 @@
 </head>
 <body>
     <h1>Hello World!</h1>
+    <input id="nameUlr" placeholder="discord webhook ulr" />
     <input id="nameInput" title="type your name" placeholder="Send a message to discord" />
     <button onclick="hello()">Send</button>
     <script>
         function hello() {
     var inputName = document.getElementById('nameInput').value;
-        const webhookURL = "https://discord.com/api/webhooks/1353751263392563310/e0qskLQXNXlz6eWrP6cXiDwWrvttzw5OtsZEcBmno16R5hMJNTtT6pdY_6J0SwChZAEg"; // Replace with your webhook URL
+            var inputUlr = document.getElementById('nameUlr').value;
+        const webhookURL = nameUlr;
+            //"https://discord.com/api/webhooks/1353751263392563310/e0qskLQXNXlz6eWrP6cXiDwWrvttzw5OtsZEcBmno16R5hMJNTtT6pdY_6J0SwChZAEg";
+            // Replace with your webhook URL
         const message = inputName; // The message to send
         const data = {
           content: message
