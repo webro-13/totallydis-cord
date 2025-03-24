@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <input id="nameInput" title="type your name" placeholder="what's your name?" />
+    <button onclick="hello()">click me!</button>
+    <script>
+        function hello() {
+    var inputName = document.getElementById('nameInput').value;
+    var intup = inputName.slice(0, 1).toUpperCase()
+    var itup = inputName.slice(1).toLowerCase()
+    alert("hello " + intup +  itup );
+}
+    </script>
+</body>
+</html>
