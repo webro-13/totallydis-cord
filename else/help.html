@@ -11,8 +11,9 @@
     <p>Welcome to Totally Discord!</p>
     <p>this is a small (not actualy discord) website.</p>
     <p>all bots (except for this one*) post to a private server on discord</p>
-    <p>select a bot and type your message then click send</p>
+    <p>select a bot and type your message; then click send</p>
     <p>for any feedback or errors use the bot below</p>
+    <h2>Help 🤖</h2>
     <input style="margin: 5px;" placeholder="Username" id="use" />
     <input style="margin: 5px;" placeholder="message" id="mess" />
     <button style="margin: 5px;" onclick="hello()" title="send" class="btn btn-primary" >Send</button>
@@ -29,13 +30,13 @@
     var inputMess = document.getElementById('mess').value;
     var messsage = "**" + inputName + ":** " + inputMess
 
-    if (inputName != "" && inputMess != ""){
+    
         const webhookURL = "https://discord.com/api/webhooks/1353751263392563310/e0qskLQXNXlz6eWrP6cXiDwWrvttzw5OtsZEcBmno16R5hMJNTtT6pdY_6J0SwChZAEg";
         const message = messsage;
         const data = {
           content: message
         };
-
+if (inputName != "" && inputMess != ""){
         fetch(webhookURL, {
           method: 'POST',
           headers: {

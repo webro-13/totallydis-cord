@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Totally Discord · Lounge 🤖</title>
+    <title>Totally Discord · Sing-It 🤖</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="../style.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Lounge</h1>
-    <p>this bot posts to the "Lounge" voice channel</p>
+    <h1>Sing-It</h1>
+    <p>This bot posts to the #music channel</p>
     <input style="margin: 5px;" placeholder="Username" id="use" />
     <input style="margin: 5px;" placeholder="message" id="mess" />
     <button style="margin: 5px;" onclick="hello()" title="send" class="btn btn-primary" >Send</button>
@@ -19,12 +19,12 @@
     var messsage = "**" + inputName + ":** " + inputMess
 
     
-        const webhookURL = "https://discord.com/api/webhooks/1354439995674333325/l3rBiosgQg01LDudIdjGtPiBPau4q2zWaPXSUMYgpMYwjNu0yZLd0RuE6nv8QkcZInT2";
+        const webhookURL = "https://discord.com/api/webhooks/1354440184724328618/35KbSltLUlVkDkKpFqa9CJ8nval5oaCkfZ1eYfUhptPlQiJENaEgHYsUR387XxcoQ61N";
         const message = messsage;
         const data = {
           content: message
         };
-if (inputName != "" && inputMess != ""){
+      if (inputName != "" && inputMess != ""){
         fetch(webhookURL, {
           method: 'POST',
           headers: {
