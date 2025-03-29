@@ -79,3 +79,10 @@ label {
   display: block;
   margin-bottom: 10px;
 }
+
+textarea{
+    margin: 5px; 
+    box-shadow: none; 
+    border-color: black;
+    border-width: 1px;
+}
