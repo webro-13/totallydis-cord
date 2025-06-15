@@ -1,5 +1,5 @@
 @media (min-width: 319px) and (max-width: 480px){
-      #main{
+      .main{
         margin: 15px;
       }
       .b2{
@@ -12,7 +12,7 @@
     }
 
 
-#main{
+.main{
     display: flex;
     flex-direction: column;
     justify-content: center;
